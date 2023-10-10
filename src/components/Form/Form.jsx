@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import css from './Form.module.css';
 
-export const Form = () => {
+export const Form = ({onFormSubmit}) => {
  
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
