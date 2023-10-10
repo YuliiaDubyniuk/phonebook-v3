@@ -5,7 +5,7 @@ import { SearchField } from './SearchField/SearchField';
 
 export const App = () => {
   const [contacts, setContacts] = useState(() => {
-    const contactsInStorage = localStorage.getItem('myContacts');
+    const contactsInStorage = localStorage.getItem('contacts');
     if (contactsInStorage) {
       return JSON.parse(contactsInStorage);
     } else {
@@ -15,7 +15,7 @@ export const App = () => {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    localStorage.setItem('myContacts', JSON.stringify(contacts));
+    localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const addContact = newContact => {
